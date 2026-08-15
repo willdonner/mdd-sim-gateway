@@ -12,6 +12,9 @@ All notable changes follow Keep a Changelog and Semantic Versioning.
 - eSIM profile enable now stops the other saved lines on the same modem, rebuilds only that
   modem's VPCD bridge, verifies the requested ICCID, refreshes sibling virtual readers and starts
   only the active profile line.
+- Flight-mode VoWiFi can settle on a direct-serial SIM bridge without keeping ModemManager
+  active. Repeated ModemManager `PhoneFailure` channel-allocation errors also fall back to the
+  direct serial path while cellular data remains disabled.
 
 ## [1.3.10] - 2026-08-16
 
