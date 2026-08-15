@@ -9,6 +9,9 @@ All notable changes follow Keep a Changelog and Semantic Versioning.
 - eUICC clients can use the pre-allocated logical channel exposed by a modem VPCD slot.
   `MANAGE CHANNEL` open and close commands are emulated by the bridge instead of being
   forwarded to the modem to allocate or release a second channel.
+- eSIM profile enable now stops the other saved lines on the same modem, rebuilds only that
+  modem's VPCD bridge, verifies the requested ICCID, refreshes sibling virtual readers and starts
+  only the active profile line.
 
 ## [1.3.10] - 2026-08-16
 
